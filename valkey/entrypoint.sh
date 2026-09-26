@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 cd /home/container
 
 # Make internal Docker IP address available to processes.
-INTERNAL_IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
+INTERNAL_IP=$(ip route get 1 | awk '{for (i = 1; i < NF; i++) if ($i == "src") {print $(i+1); exit}}')
 export INTERNAL_IP
 
 # Replace Startup Variables
