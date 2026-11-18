@@ -1,7 +1,7 @@
 FROM        --platform=$TARGETOS/$TARGETARCH mongo:8.0-noble
 
 LABEL       org.opencontainers.image.source="https://github.com/EmpireWar/yolks"
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL       author="Empire War Admins" maintainer="admin@empirewar.org"
 
 ENV         DEBIAN_FRONTEND=noninteractive
 
